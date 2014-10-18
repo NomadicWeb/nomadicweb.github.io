@@ -1,4 +1,5 @@
+========================================================
 nomadicweb.github.io
-====================
+========================================================
 
-our website
+Our personal website. Not much here right now though.
