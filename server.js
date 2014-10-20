@@ -1,9 +1,19 @@
 // ====================================================
 // EXPRESS
 // ====================================================
-var express    = require('express');
-var app        = express();
-var router     = express.Router();
+var express = require('express');
+var app     = express();
+
+// ====================================================
+// CSS PREPROCESSOR
+// ====================================================
+var stylus = require('stylus');
+var nib    = require('nib');
+
+function compile(str, path){
+  return stylus(str).set('filename', path).use(nib());
+}
+
 
 // ====================================================
 // APP CONFIG
@@ -15,6 +25,7 @@ app.set('port', conf.port);
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/app/views');
 app.use(express.static(__dirname + 'app/assets'));
+app.use(stylus.middleware({src: __dirname + '/app/assets', compile: compile}));
 
 // @todo - install seperate logging
 //app.use(express.logger('dev'));
