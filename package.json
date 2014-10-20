@@ -1,0 +1,29 @@
+{
+  "name": "nomadicweb.github.io",
+  "version": "1.0.0",
+  "description": "NomadicWeb's slice of the internet",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NomadicWeb/nomadicweb.github.io.git"
+  },
+  "keywords": [
+    "nomadicweb",
+    "web-development"
+  ],
+  "author": "Luke Murphy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NomadicWeb/nomadicweb.github.io/issues"
+  },
+  "homepage": "https://github.com/NomadicWeb/nomadicweb.github.io",
+  "dependencies": {
+    "express":"4.9.7",
+    "jade":"1.7.0",
+    "body-parser": "1.9.0"
+  }
+}
