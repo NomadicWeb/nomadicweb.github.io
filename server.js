@@ -24,7 +24,7 @@ var bodyParser = require('body-parser');
 app.set('port', conf.port);
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/app/views');
-app.use(express.static(__dirname + 'app/assets'));
+app.use(express.static(__dirname + '/app/assets'));
 app.use(stylus.middleware({src: __dirname + '/app/assets', compile: compile}));
 
 // @todo - install seperate logging
