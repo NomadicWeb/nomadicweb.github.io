@@ -18,15 +18,7 @@ gulp.task('dev', function(){
       ext: 'jade styl js', 
       ignore: ['./node_modules/**'] ,
   })
-  .on('start', function(){
-    console.log('started!');
-  })
-
   .on('change', ['stylus', 'watch'])
-
-  .on('restart', function (){
-    console.log('restarted!');
-  });
 });
 
 gulp.task('watch', function() {
