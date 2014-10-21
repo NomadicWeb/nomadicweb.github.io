@@ -8,9 +8,10 @@ var app     = express();
 // CSS PREPROCESSOR
 // ====================================================
 var stylus = require('stylus');
+var axis   = require('axis');
 
 function compile(str, path){
-  return stylus(str).set('filename', path);
+  return stylus(str).set('filename', path).use(axis());
 }
 
 

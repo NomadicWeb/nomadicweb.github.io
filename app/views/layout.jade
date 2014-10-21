@@ -3,13 +3,14 @@ html
   head
     title #{title} - My Site
     link(rel='stylesheet', href='stylesheets/style.css')
+    link(rel='stylesheet', href='stylesheets/bootstrap.min.css')
   body
-    header
-      h1 My Site
     .container
-      .main-content
-        block content
-      .sidebar
-        block sidebar
-    footer
-      p Running on node with Express, Jade and Stylus
+      .row
+        .col-md-6
+          blockquote 
+            | I am a really shit Kanye west quote and I would like
+            | to just ramble on about nothing but just to fill up 
+            | so filler text
+        .col-md-6
+          p I am another col-md-6
