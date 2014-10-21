@@ -1,8 +1,9 @@
 // ====================================================
 // EXPRESS
 // ====================================================
-var express = require('express');
-var app     = express();
+var express    = require('express');
+var livereload = require('express-livereload');
+var app        = express();
 
 
 // ====================================================
@@ -34,6 +35,7 @@ module.exports = app;
 // ====================================================
 // SERVER
 // ====================================================
+livereload(app, {watchDir: process.cwd() + "/app/"});
 app.listen(app.get('port'), function(){
       console.log('Listening on ' + app.get('port'));
 });
