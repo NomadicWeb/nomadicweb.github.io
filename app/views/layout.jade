@@ -1,15 +1,12 @@
 doctype
 html
   head
-    title #{title} - My Site
+    title NomadicWeb - #{title}
     link(rel='stylesheet', href='stylesheets/style.css')
     link(rel='stylesheet', href='stylesheets/bootstrap.min.css')
     != LRScript
   body
     .container
-      .row
-        .col-md-6
-          blockquote 
-            | A simple radness
-        .col-md-6
-          p I am another col-md-6
+      .col-md-10.col-md-offset-1.wrapper
+        .main
+          block content
