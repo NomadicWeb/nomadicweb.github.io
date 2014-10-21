@@ -8,10 +8,9 @@ var app     = express();
 // CSS PREPROCESSOR
 // ====================================================
 var stylus = require('stylus');
-var nib    = require('nib');
 
 function compile(str, path){
-  return stylus(str).set('filename', path).use(nib());
+  return stylus(str).set('filename', path);
 }
 
 
