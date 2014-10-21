@@ -6,11 +6,11 @@ router.get('/', function (req, res) {
 });
 
 router.get('/luke', function (req, res) {
-    res.render('luke', { title : 'Luke Murphy' });
+    res.render('luke', { title : 'Home' });
 });
 
 router.get('/martin', function (req, res) {
-    res.render('martin', { title : "Martin 'O Grady" });
+    res.render('martin', { title : 'Home' });
 });
 
 module.exports = router;

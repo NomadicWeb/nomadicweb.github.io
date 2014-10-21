@@ -15,11 +15,7 @@ var bodyParser = require('body-parser');
 app.set('port', conf.port);
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/app/views');
-
-// @todo - install seperate logging
-//app.use(express.logger('dev'));
-
-app.use(express.static(__dirname + '/app/assets'));
+app.use(express.static(__dirname + '/app/assets/'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(function(err, req, res, next){res.status(err.status || 500);});
