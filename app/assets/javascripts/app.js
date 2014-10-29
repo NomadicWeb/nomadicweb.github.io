@@ -1,8 +1,7 @@
-
-// rotator via morphext.js for the front page
-// 'we build `xyz` text
-$("#build-rotator").Morphext({
-    animation: "fadeIn",
-    separator: ",",
-    speed: 3500
+$(function() {
+  if (Modernizr.history){
+    // history is supported; do magical things
+  }else{
+    // history is not supported; nothing fancy here
+  }
 });
