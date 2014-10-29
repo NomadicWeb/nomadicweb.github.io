@@ -51,8 +51,6 @@ function loadContent(href){
             // should really only do this on
             // the index page - @todo
             rotateTextSetup();
-
-            $pageWrap.animate({height: baseHeight + $mainContent.height() + "px"});
          });
       
       $("nav a").removeClass("current");
