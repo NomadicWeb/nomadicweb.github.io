@@ -1,18 +1,19 @@
+$(window).bind("popstate", function() {
+  var link = location.pathname.replace(/^.*[\\/]/, ""); // get filename only
+  loadContent(link);
+});
+
 // set up some variables
 var $mainContent = $(".switch-content"),
     $pageWrap    = $(".container"),
     baseHeight   = 0,
     $el;
 
-// calculate wrapper heights to prevent jumping when loading new content
 $pageWrap.height($pageWrap.height());
 baseHeight = $pageWrap.height() - $mainContent.height();
 
 $(function() {
   if (Modernizr.history){
-    // history is supported; do magical things
-    console.log("Modernizr.history supported!");
-
     $(".menu").delegate("a", "click", function(e) {
       e.preventDefault();
       console.log("Hijacking the click event!");
@@ -22,7 +23,6 @@ $(function() {
     });
 
   }else{
-    // history is not supported; nothing fancy here
     console.log("Modernizr.history not supported!");
   }
 });
@@ -30,11 +30,11 @@ $(function() {
 function loadContent(href){
   console.log("Attempting to AJAX-in some content");
   $mainContent
-    .fadeOut(200, function() { // fade out the content of the current page
+    .fadeOut(200, function(){
       console.log("Just faded out the .wrapper");
       $mainContent
         .hide()
-        .load(href + " .switch-content", function(){ // load the contents of whatever href is
+        .load(href + " .switch-content", function(){
           $mainContent.fadeIn(200, function(){
             console.log("AJAX-in complete");
 
