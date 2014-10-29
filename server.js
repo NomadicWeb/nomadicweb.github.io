@@ -32,6 +32,7 @@ module.exports = app;
 // SERVER
 // ====================================================
 livereload(app, {watchDir: process.cwd() + "/app/"});
-app.listen(app.get('port'), function(){
-      console.log('Listening on ' + app.get('port'));
+var port = process.env.PORT || 5000;
+app.listen(port, function(){
+      console.log('Listening on ' + port);
 });
