@@ -2,11 +2,19 @@ doctype
 html
   head
     title NomadicWeb - #{title}
+
+    // stylesheets
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+
+
+    // live-reload
     != LRScript
   body
     .container
       .col-md-10.col-md-offset-1.wrapper
         .main
           block content
+
+        // javascripts
+        script(src="/javascripts/rotator.js")
