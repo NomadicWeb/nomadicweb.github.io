@@ -31,5 +31,9 @@
     "stylus": "0.49.2",
     "express-livereload": "0.0.24",
     "gulp-nodemon": "^1.0.4"
+  },
+  "engines": {
+    "node": "*",
+    "npm": "*"
   }
 }
