@@ -15,7 +15,18 @@ html
     .container
       .col-md-10.col-md-offset-1.wrapper
         .main
+
+          .col-md-6.col-md-offset-3.logo
+            p THE LOGO
+
+          .col-md-6.col-md-offset-3.menu
+            include menu.jade
+
+          // switchable content
           block content
+
+          .col-md-6.col-md-offset-3.footer
+            small Copyright @ NomadicWeb 2014
 
         // javascripts
         script(src="/javascripts/jquery.js")
