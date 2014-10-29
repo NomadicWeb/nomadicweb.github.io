@@ -31,4 +31,4 @@ node_modules
 # app/config/conf.js
 
 # don't commit compiled css!
-app/assets/stylesheets/style.css
+# app/assets/stylesheets/style.css
