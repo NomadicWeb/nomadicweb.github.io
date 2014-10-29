@@ -28,7 +28,7 @@ node_modules
 .lock-wscript
 
 # ignore user configuration, only include sample
-app/config/conf.js
+# app/config/conf.js
 
 # don't commit compiled css!
 app/assets/stylesheets/style.css
