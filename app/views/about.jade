@@ -1,8 +1,8 @@
 extends layout
 
 block content
-  .col-md-6.col-md-offset-3.synopsis
+  .col-md-6.col-md-offset-3.synopsis.about-links
     .col-md-6
-      a(href='/about/luke') luke
+      a(href='/about/luke', onclick="linkLoader()") luke
     .col-md-6
-      a(href='/about/martin') martin
+      a(href='/about/martin', onclick="linkLoader()") martin

@@ -27,6 +27,16 @@ $(function() {
   }
 });
 
+function linkLoader(){
+  $(".about-links").delegate("a", "click", function(e) {
+    e.preventDefault();
+    console.log("Hijacking the click event outside the menu!");
+    var _href = $(this).attr("href");
+    history.pushState(null, null, _href);
+    loadContent(_href);
+  });
+}
+
 function loadContent(href){
   console.log("Attempting to AJAX-in some content");
   $mainContent
@@ -54,4 +64,3 @@ function loadContent(href){
 function rotateTextSetup(){
   return $("#build-rotator").Morphext({ animation: "fadeIn", separator: ",", speed: 3500 });
 }
-
