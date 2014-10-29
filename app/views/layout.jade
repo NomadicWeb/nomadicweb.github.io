@@ -3,6 +3,10 @@ html
   head
     title NomadicWeb - #{title}
 
+    // modernizr, so all the web cool kids think
+    // I am cool too (also, it's useful)
+    script(src="/javascripts/modernizr-custom.js")
+
     // stylesheets
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
@@ -30,6 +34,5 @@ html
 
         // javascripts
         script(src="/javascripts/jquery.js")
-        script(src="/javascripts/modernizr-custom.js")
         script(src="/javascripts/morphext.min.js")
         script(src="/javascripts/app.js")
