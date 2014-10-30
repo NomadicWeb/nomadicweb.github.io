@@ -27,8 +27,8 @@ $(function() {
   }
 });
 
-function linkLoader(){
-  $(".about-links").delegate("a", "click", function(e) {
+function linkLoader(theEl){
+  $(theEl).delegate("a", "click", function(e) {
     e.preventDefault();
     console.log("Hijacking the click event outside the menu!");
     var _href = $(this).attr("href");
